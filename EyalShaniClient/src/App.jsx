@@ -2,7 +2,13 @@ import Todos from "./components/Todos";
 function App() {
   return (
     <>
-      <Todos />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Signup" element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
