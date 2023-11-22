@@ -69,3 +69,11 @@ input[type="button"]:hover{
     margin-right :  auto;
 
 }
+
+#my-profile-header {
+    margin-top: 20px;
+}
+
+#info input[type="button"] {
+    margin-top: 2vh;
+}

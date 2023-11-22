@@ -20,7 +20,7 @@ export default function Navbar({ logout }) {
           {" "}
           <div>Todos</div>{" "}
         </NavLink>
-        <NavLink>
+        <NavLink to="/info">
           {" "}
           <div>Info </div>{" "}
         </NavLink>

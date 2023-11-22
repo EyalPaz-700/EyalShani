@@ -6,6 +6,7 @@ import { useState } from "react";
 import Posts from "./Components/Posts";
 import Navbar from "./Components/Navbar";
 import Post from "./Components/Post";
+import Info from "./Components/Info";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(
@@ -40,6 +41,10 @@ function App() {
           <Route path="/Signup" element={<Signup setActiveUser={login} />} />
           <Route element={<Navbar />}>
             <Route path="/Home" element={<Home logout={logout} />} />
+            <Route
+              path="/info"
+              element={<Info setActiveUser={login} currentUser={currentUser} />}
+            />
             <Route path="/posts">
               <Route index element={<Posts currentUser={currentUser} />} />
               <Route path=":id" element={<Post currentUser={currentUser} />} />
