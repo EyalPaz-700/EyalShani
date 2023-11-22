@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Oswald&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Assistant', sans-serif;
+    background-color: #413C58;
+    color : #F7FFE0;
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login {
+    row-gap: 50px;
+}
+
+#signup {
+    row-gap: 20px;
+}
+
+label h3{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    
+}
+
+input[type="text"] , input[type="password"] {
+    width : 20vw;
+    height: 6vh;
+    background-color: white;
+    color : black;
+    border-radius: 5px;
+    padding-left : 1vw;
+
+}
+
+input[type="button"] {
+    width : 12vw;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover{
+   background-color: #B2B1CF;
+   color: black;
+   cursor: pointer;
+}
+
+.error-msgs{
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 20vw;
+    margin-left :  auto;
+    margin-right :  auto;
+
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-export default function Login() {
+import "../style/forms.css";
+export default function Login({ setActiveUser }) {
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -14,9 +14,11 @@ export default function Login() {
 
   const onSubmit = async () => {
     try {
-      let data = await fetch("http://localhost:3000/users");
+      let data = await fetch(
+        `http://localhost:3000/users/?username=${form.username}`
+      );
       data = await data.json();
-      const user = returnUser(data, form.username);
+      const user = data[0];
       if (user) {
         if (user.password === form.password) {
           setErrMsg("");
@@ -33,33 +35,31 @@ export default function Login() {
     }
   };
 
-  const returnUser = (users, username) => {
-    for (const user of users) {
-      if (user.username === username) {
-        return user;
-      }
-    }
-    return;
-  };
-
-  const setActiveUser = (user) => {
-    localStorage.setItem("currentUser", JSON.stringify(user));
-  };
   return (
     <>
       <h1 id="login-header"> Login </h1>
-      <form>
+      <form id="login">
         <label>
-          <h3> username </h3>
-          <input name="username" type="text" onInput={changeFormInput} />
+          <h3> Username </h3>
+          <input
+            placeholder="shir123"
+            name="username"
+            type="text"
+            onInput={changeFormInput}
+          />
         </label>
         <label>
-          <h3> password </h3>
-          <input type="password" onInput={changeFormInput} name="password" />
+          <h3> Password </h3>
+          <input
+            placeholder="MyPassword123"
+            type="password"
+            onInput={changeFormInput}
+            name="password"
+          />
         </label>
         <input onClick={onSubmit} type="button" value="Submit" />
       </form>
-      <div className="error-msgs">{errMsg}</div>
+      {errMsg && <div className="error-msgs">{errMsg}</div>}
     </>
   );
 }

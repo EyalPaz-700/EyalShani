@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ setActiveUser }) {
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -14,10 +14,6 @@ export default function Login() {
 
   const changeFormInput = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const setActiveUser = (user) => {
-    localStorage.setItem("currentUser", JSON.stringify(user));
   };
 
   const onSubmit = async () => {
@@ -84,18 +80,29 @@ export default function Login() {
   return (
     <>
       <h1 id="signup-header"> Signup </h1>
-      <form>
+      <form id="signup">
         <label>
-          <h3> username </h3>
-          <input name="username" type="text" onInput={changeFormInput} />
-        </label>
-        <label>
-          <h3> password </h3>
-          <input type="password" onInput={changeFormInput} name="password" />
-        </label>
-        <label>
-          <h3> confirm password </h3>
+          <h3> Username </h3>
           <input
+            placeholder="shir123"
+            name="username"
+            type="text"
+            onInput={changeFormInput}
+          />
+        </label>
+        <label>
+          <h3> Password </h3>
+          <input
+            placeholder="MyPassword123"
+            type="password"
+            onInput={changeFormInput}
+            name="password"
+          />
+        </label>
+        <label>
+          <h3> Confirm Password </h3>
+          <input
+            placeholder="MyPassword123"
             type="password"
             onInput={changeFormInput}
             name="verifyPassword"
@@ -103,7 +110,7 @@ export default function Login() {
         </label>
         <input onClick={onSubmit} type="button" value="Submit" />
       </form>
-      <div className="error-msgs">{errMsg}</div>
+      {errMsg && <div className="error-msgs">{errMsg}</div>}
     </>
   );
 }
