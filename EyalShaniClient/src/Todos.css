@@ -1,0 +1,21 @@
+.todo {
+    border: 1px black solid;
+    border-radius: 2px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 60vw;
+
+}
+
+.todo-content {
+    display: flex;
+    width: 2em;
+}
+
+
+/* #todo-container { */
+/* display: flex; */
+/* flex-wrap: wrap; */
+/* } */

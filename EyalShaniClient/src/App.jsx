@@ -1,8 +1,8 @@
-import Todos from "./components/Todos";
-import Home from "./components/Home";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
-import { BrowserRouter, Routes, Route } from "react-broser-route";
+import Todos from "./Components/Todos";
+import Home from "./Components/Home";
+import Signup from "./Components/Signup";
+import Login from "./Components/Login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
