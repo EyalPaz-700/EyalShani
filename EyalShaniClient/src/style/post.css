@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2vh;
+    row-gap: 2vh;
+}
+
+.post {
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    border-radius: 5px;
+    height : 20vh;
+    width : 30%;
+    overflow: auto;
+}
+
+.post-header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.post-title{
+    text-align: center;
+}
+
+.full-post{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    width: 70%;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    border-radius: 6px;
+    padding: 5vh;
+}
+
+
+
+.full-post-header {
+    margin: 0;
+    padding: 2vh;
+}
+
+.full-post h2{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.full-post article{
+    margin-bottom: 2vh;
+}
+
+.comments-header {
+    text-align: center;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+}
+
+.comment button{
+    text-align: center;
+   margin: auto;
+   margin-top: 1vh;
+}
+
+.add-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.add-comment input{
+    flex-basis : 80%;
+}
+
+.add-comment button {
+    flex-basis: 15%;
+    border-radius: 5px;
+}
+
+.comment-section{
+    min-height: 35vh;
+}
+
+.comment-container {
+    height: 100%;
+    overflow: auto;
+}
+
+.add-post {
+    background-color: #B2B1CF;
+    width: 60%;
+    color: black;
+    height: 5vh;
+}
+
+.add-btns {
+      margin-top: 2vh;
+    margin-bottom: 2vh;
+    position: relative;
+    width :100%;
+    display: flex;
+    justify-content: center;
+
+}

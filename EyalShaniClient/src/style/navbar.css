@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    justify-items: center;
+
+}
+
+nav a{
+    flex-basis: 20%;
+    height: 10vh;
+    text-decoration: none;
+    margin: auto;
+}
+
+nav a div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+}
+nav a:hover{
+    background-color: #B2B1CF;
+}

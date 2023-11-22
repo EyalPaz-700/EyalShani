@@ -1,0 +1,12 @@
+body {
+    position: relative;
+}
+.ReactModal__Content {
+    width : 40vw;
+    height: 30vh;
+    position: fixed;
+     top: 50% !important;
+    left: 50% !important;
+  transform: translate(-50%, -50%);
+    background-color: #413C58 !important;
+}
