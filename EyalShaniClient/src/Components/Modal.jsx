@@ -31,14 +31,14 @@ const AddPostModal = ({ isOpen, onClose, onSubmit }) => {
       <h2>Add a New Post</h2>
       <label>
         Title:
+        <br />
         <input type="text" value={title} onChange={handleTitleChange} />
       </label>
-      <br />
       <label>
         Content:
-        <textarea value={content} onChange={handleContentChange} />
+        <br />
+        <input type="text" value={content} onChange={handleContentChange} />
       </label>
-      <br />
       <button onClick={() => handleSubmit(title)}>Submit</button>
       <button onClick={onClose}>Cancel</button>
     </Modal>

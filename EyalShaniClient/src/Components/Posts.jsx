@@ -5,7 +5,7 @@ import AddPostModal from "./Modal";
 
 export default function Posts({ currentUser }) {
   const [posts, setPosts] = useState([]);
-
+  const [queryPosts, setQueryPosts] = useState([]);
   const removePost = async (PostId) => {
     let response = await fetch(`http://localhost:3000/posts/${PostId}`, {
       method: "DELETE",
@@ -73,15 +73,29 @@ export default function Posts({ currentUser }) {
   useEffect(() => {
     fetch("http://localhost:3000/posts")
       .then((data) => data.json())
-      .then((data) => setPosts(data))
+      .then((data) => {
+        setPosts(data);
+        setQueryPosts(data);
+      })
       .catch((err) => console.log(err));
   }, []);
+
   return (
     <>
       <div className="add-btns">
         <button className="add-post" onClick={handleOpenModal}>
           New Post
         </button>
+        <input
+          type="text"
+          placeholder="Search"
+          onInput={(e) => {
+            setQueryPosts(
+              posts.filter((el) => el.body.includes(e.target.value.trim()))
+            );
+          }}
+          className="search-query"
+        />
       </div>
 
       <AddPostModal
@@ -90,7 +104,7 @@ export default function Posts({ currentUser }) {
         onSubmit={handleAddPost}
       />
       <div className="posts-container">
-        {posts.map((post, index) => (
+        {queryPosts.map((post, index) => (
           <MinimizedPost
             currentUser={currentUser}
             key={index}

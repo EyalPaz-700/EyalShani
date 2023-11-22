@@ -108,7 +108,8 @@
     background-color: #B2B1CF;
     width: 60%;
     color: black;
-    height: 5vh;
+    height: 6vh;
+    border-radius: 5px;
 }
 
 .add-btns {
@@ -117,6 +118,5 @@
     position: relative;
     width :100%;
     display: flex;
-    justify-content: center;
-
+    justify-content: space-evenly;
 }

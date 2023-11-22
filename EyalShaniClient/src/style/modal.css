@@ -3,10 +3,14 @@ body {
 }
 .ReactModal__Content {
     width : 40vw;
-    height: 30vh;
+    height: 40vh;
     position: fixed;
      top: 50% !important;
     left: 50% !important;
   transform: translate(-50%, -50%);
     background-color: #413C58 !important;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5vh;
+    align-items: center;
 }
