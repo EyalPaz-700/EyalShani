@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../style/forms.css";
 export default function Login({ setActiveUser }) {
   const [form, setForm] = useState({
@@ -59,6 +60,10 @@ export default function Login({ setActiveUser }) {
         </label>
         <input onClick={onSubmit} type="button" value="Submit" />
       </form>
+      <Link className="signed-link" to="/signup">
+        {" "}
+        Not Signed Up?
+      </Link>
       {errMsg && <div className="error-msgs">{errMsg}</div>}
     </>
   );

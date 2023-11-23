@@ -40,7 +40,7 @@ export default function Post({ currentUser }) {
     });
     response = await response.json();
     setComments((prev) => {
-      return [...prev, commentBody];
+      return [...prev, response];
     });
   };
 

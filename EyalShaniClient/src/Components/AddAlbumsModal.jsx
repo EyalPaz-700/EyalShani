@@ -3,22 +3,16 @@ import Modal from "react-modal";
 import "../style/modal.css";
 Modal.setAppElement("#root"); // Set the root element for accessibility
 
-const AddPostModal = ({ isOpen, onClose, onSubmit }) => {
+const AddAlbumModal = ({ isOpen, onClose, onSubmit }) => {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
 
-  const handleContentChange = (e) => {
-    setContent(e.target.value);
-  };
-
   const handleSubmit = () => {
-    onSubmit({ title, content });
+    onSubmit(title);
     setTitle("");
-    setContent("");
     onClose();
   };
 
@@ -26,23 +20,19 @@ const AddPostModal = ({ isOpen, onClose, onSubmit }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={onClose}
-      contentLabel="Add Post Modal"
+      contentLabel="Add Album Modal"
     >
-      <h2>Add a New Post</h2>
+      <h2>Add a New Album</h2>
       <label>
         Title:
         <br />
         <input type="text" value={title} onChange={handleTitleChange} />
       </label>
-      <label>
-        Content:
-        <br />
-        <input type="text" value={content} onChange={handleContentChange} />
-      </label>
+
       <button onClick={() => handleSubmit(title)}>Submit</button>
       <button onClick={onClose}>Cancel</button>
     </Modal>
   );
 };
 
-export default AddPostModal;
+export default AddAlbumModal;

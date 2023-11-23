@@ -3,7 +3,7 @@
     padding: 0%;
     margin: 0%;
 }
-.posts-container {
+.albums-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -12,7 +12,7 @@
     row-gap: 2vh;
 }
 
-.post {
+.albums {
     padding: 0.5vw;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
     overflow: auto;
 }
 
-.post-header{
+.album-header{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -31,8 +31,19 @@
     justify-content: space-evenly;
 }
 
-.post-title{
+.album-title{
     text-align: center;
+}
+
+.album {
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    border-radius: 5px;
+    height : 10vh;
+    width : 30%;
+    overflow: auto;
 }
 
 .full-post{
@@ -64,33 +75,18 @@
     margin-bottom: 2vh;
 }
 
-.comments-header {
-    text-align: center;
-}
-
-.comment {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5vh;
-}
-
-.comment button{
-    text-align: center;
-   margin: auto;
-   margin-top: 1vh;
-}
-
-.add-comment{
+.add-photo{
+    margin-top: 2vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.add-comment input{
-    flex-basis : 80%;
+.add-photo input{
+    flex-basis : 40%;
 }
 
-.add-comment button {
+.add-photo button {
     flex-basis: 15%;
     border-radius: 5px;
 }
@@ -121,7 +117,47 @@
     justify-content: space-evenly;
 }
 
-.remove-button {
-    width: 8vw;
+.images-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 70vh;
+    overflow: scroll;
+    justify-content: center;
+    row-gap: 4vh;
+    column-gap: 2vh;
+}
+
+ .full-album-title{
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.photo {
+    flex-basis: 30%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
     border-radius: 5px;
+}
+
+.photo img {
+    height : 70%;
+    width: 60%;
+}
+
+.photo h3 {
+    height : 8vh;
+    text-align: center;
+
+}
+
+.remove-photo {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
 }

@@ -5,22 +5,38 @@ export default function Navbar({ logout }) {
   return (
     <>
       <nav>
-        <NavLink onClick={logout} to="/login">
+        <NavLink
+          onClick={logout}
+          to="/login"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <div>Logout</div>
         </NavLink>
-        <NavLink to="/posts">
+        <NavLink
+          to="/posts"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           {" "}
           <div>Posts</div>{" "}
         </NavLink>
-        <NavLink>
+        <NavLink
+          to="/Albums"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           {" "}
           <div>Albums</div>{" "}
         </NavLink>
-        <NavLink to="/todos">
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "")}
+          to="/todos"
+        >
           {" "}
           <div>Todos</div>{" "}
         </NavLink>
-        <NavLink>
+        <NavLink
+          to="/info"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           {" "}
           <div>Info </div>{" "}
         </NavLink>
