@@ -32,12 +32,13 @@ function App() {
             path="/"
             element={
               currentUser ? (
-                <Home ogout={logout} />
+                <Home logout={logout} />
               ) : (
                 <Login setActiveUser={login} />
               )
             }
           />
+          <Route path="/Home" element={<Home logout={logout} />} />
           <Route path="/Login" element={<Login setActiveUser={login} />} />
           <Route path="/Signup" element={<Signup setActiveUser={login} />} />
           <Route element={<Navbar />}>
@@ -45,7 +46,6 @@ function App() {
               <Route index element={<Albums currentUser={currentUser} />} />
               <Route path=":id" element={<Album currentUser={currentUser} />} />
             </Route>
-            <Route path="/Home" element={<Home logout={logout} />} />
             <Route
               path="/info"
               element={<Info setActiveUser={login} currentUser={currentUser} />}

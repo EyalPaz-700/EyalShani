@@ -26,3 +26,15 @@ nav a:hover, a.active{
     background-color: #B2B1CF;
 }
 
+.eyal-image-container {
+    margin-top: 10%;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.eyal-shani {
+    width: 30vw;
+    height: 50vh;
+}
