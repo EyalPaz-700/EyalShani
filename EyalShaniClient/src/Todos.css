@@ -4,15 +4,28 @@
     margin: 5px;
     padding: 5px;
     display: flex;
-    justify-content: space-between;
     width: 60vw;
     align-items: center;
-
 }
 
-.todo-content {
-    display: flex;
-    width: 2em;
+h1.sort-header {
+    margin-top: 0;
+}
+
+.todo p {
+    flex-basis: 5%;
+}
+.todo input {
+    justify-self: left;
+    flex-basis: 5%;
+}
+.todo h2{
+    flex-basis: 50%;
+}
+.todo button{
+    margin-left: 20%;
+    flex-basis: 20%;
+    float: right;
 }
 
 .buttons {

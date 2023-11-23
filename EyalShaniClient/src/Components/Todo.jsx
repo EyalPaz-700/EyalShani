@@ -13,15 +13,13 @@ const Todo = ({ id, index, title, userId, completed, updateUser }) => {
   return (
     <>
       <div className="todo">
-        <div className="todo-content">
-          <p className="todos-index">{index}</p>
-          <input
-            type="checkbox"
-            checked={completed ? true : false}
-            onChange={handleChecked}
-          ></input>
-          <h2 className="todo-title">{title}</h2>
-        </div>
+        <p className="todos-index">{index}</p>
+        <input
+          type="checkbox"
+          checked={completed ? true : false}
+          onChange={handleChecked}
+        ></input>
+        <h2 className="todo-title">{title}</h2>
         <button
           className="buttons"
           onClick={() => {

@@ -7,7 +7,6 @@ function Todos() {
   const [sortType, setSortType] = useState("all");
   const [query, setQuery] = useState("");
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  console.log({ currentUser });
 
   useEffect(() => {
     const getTodos = async () => {
@@ -15,7 +14,6 @@ function Todos() {
       const filtered = result.filter(
         (todo) => todo.userId === currentUser["id"]
       );
-      console.log({ filtered });
       setTodos(filtered);
     };
     getTodos();
@@ -70,10 +68,6 @@ function Todos() {
         });
 
         try {
-          console.log(
-            '✌️"http://localhost:3000/todos/" + id --->',
-            "http://localhost:3000/todos/" + id
-          );
           await fetch("http://localhost:3000/todos/" + id, {
             method: "DELETE",
           });
@@ -117,7 +111,7 @@ function Todos() {
             </button>
           </div>
         </div>
-        <h1 className="todo-header">To Do:</h1>
+        <h1 className="todo-header">To Do</h1>
       </header>
       <div id="sort">
         <h1 className="sort-header">Sort By:</h1>
