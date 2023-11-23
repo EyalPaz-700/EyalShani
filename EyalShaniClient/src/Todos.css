@@ -5,7 +5,8 @@
     padding: 5px;
     display: flex;
     justify-content: space-between;
-    max-width: 60vw;
+    width: 60vw;
+    align-items: center;
 
 }
 
@@ -14,8 +15,45 @@
     width: 2em;
 }
 
+.buttons {
+    width: 8.5em;
+    height: 3em;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 2px;
+}
 
-/* #todo-container { */
-/* display: flex; */
-/* flex-wrap: wrap; */
-/* } */
+.todos-index {
+    padding: 3px;
+}
+
+.ss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sort-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-add {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.todo-header {
+    font-size: 4rem;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.todo-title {
+    padding-left: 7px;
+    max-width: 100%;
+}

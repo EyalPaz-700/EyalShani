@@ -16,7 +16,7 @@ export default function Navbar({ logout }) {
           {" "}
           <div>Albums</div>{" "}
         </NavLink>
-        <NavLink>
+        <NavLink to="/todos">
           {" "}
           <div>Todos</div>{" "}
         </NavLink>

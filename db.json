@@ -94,6 +94,13 @@
       "phone": "586.493.6943 x140",
       "password": "jacynthe.com",
       "id": 12
+    },
+    {
+      "id": 13,
+      "username": "shanimm",
+      "email": "",
+      "phone": "",
+      "password": "shanim11"
     }
   ],
   "posts": [
@@ -5265,6 +5272,24 @@
       "id": 200,
       "title": "ipsam aperiam voluptates qui",
       "completed": false
+    },
+    {
+      "title": "homework",
+      "completed": false,
+      "userId": 13,
+      "id": 201
+    },
+    {
+      "title": "helloo",
+      "completed": false,
+      "userId": 13,
+      "id": 207
+    },
+    {
+      "title": "relax",
+      "completed": false,
+      "userId": 13,
+      "id": 208
     }
   ],
   "albums": [

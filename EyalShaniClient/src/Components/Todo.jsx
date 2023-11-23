@@ -1,32 +1,36 @@
 import "../Todos.css";
 const Todo = ({ id, index, title, userId, completed, updateUser }) => {
   const currentUser = localStorage.getItem("currentUser");
-  const handleChecked = (newCheckValue) => {
+  const handleChecked = () => {
     updateUser({
       userId: userId,
       type: "changeChecked",
-      newValue: newCheckValue,
+      newValue: !completed,
+      id: id,
+      index: index,
     });
   };
   return (
     <>
       <div className="todo">
         <div className="todo-content">
-          <p>{index}</p>
+          <p className="todos-index">{index}</p>
           <input
             type="checkbox"
-            checked={completed ? checked : null}
-            onChange={(e) => handleChecked(e.target.value)}
+            checked={completed ? true : false}
+            onChange={handleChecked}
           ></input>
-          <h2>{title}</h2>
+          <h2 className="todo-title">{title}</h2>
         </div>
         <button
+          className="buttons"
           onClick={() => {
             updateUser({
               userId: userId,
               type: "delete",
               newValue: null,
               id: id,
+              index: index - 1,
             });
           }}
         >
