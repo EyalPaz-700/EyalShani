@@ -10,7 +10,6 @@ export default function Post({ currentUser }) {
   const [commentContent, setCommentContent] = useState("");
 
   const removeComment = async (commentId) => {
-    debugger;
     let response = await fetch(`http://localhost:3000/comments/${commentId}`, {
       method: "DELETE",
     });
@@ -68,7 +67,6 @@ export default function Post({ currentUser }) {
         <h3 className="comments-header">Comments</h3>
         <div className="comment-container">
           {comments.map((comment, index) => {
-            debugger;
             return (
               <Comment
                 currentUser={currentUser}

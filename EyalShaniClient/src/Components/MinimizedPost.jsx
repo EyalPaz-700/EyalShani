@@ -15,7 +15,9 @@ export default function MinimizedPost({
         <Link to={`/posts/${postId}`}>See Full Post</Link>
         <h4>{user}</h4>
         {user === currentUser.id && (
-          <button onClick={removePost}>Remove Post</button>
+          <button className="remove-button" onClick={removePost}>
+            Remove Post
+          </button>
         )}
       </div>
       <h4 className="post-title">{title}</h4>

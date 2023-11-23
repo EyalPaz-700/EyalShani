@@ -9,6 +9,9 @@ nav a{
     height: 10vh;
     text-decoration: none;
     margin: auto;
+    font-size: 1.5rem;
+    font-weight : bold;
+
 }
 
 nav a div {
@@ -16,8 +19,10 @@ nav a div {
     height: 100%;
     align-items: center;
     justify-content: center;
-    border: 5px solid black;
+    border: 3px solid black;
 }
-nav a:hover{
+
+nav a:hover, a.active{
     background-color: #B2B1CF;
 }
+

@@ -5,9 +5,11 @@
     padding: 0;
     margin: 0;
     font-family: 'Assistant', sans-serif;
-    background-color: #413C58;
     color : #F7FFE0;
+}
 
+body, button, input[type="button"] {
+    background-color: #413C58;
 }
 
 h1 {
@@ -19,6 +21,8 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #413C58;
+
 }
 
 #login {
@@ -76,4 +80,11 @@ input[type="button"]:hover{
 
 #info input[type="button"] {
     margin-top: 2vh;
+}
+
+.signed-link {
+    text-align: center;
+    margin-top: 2vh;
+    width: 100%;
+    display: block;
 }
