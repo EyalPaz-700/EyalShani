@@ -6,7 +6,9 @@ export default function Album({ currentUser }) {
   const { id } = useParams();
   const [album, setAlbum] = useState({});
   const [photos, setPhotos] = useState([]);
-  const [photoUrl, setPhotoUrl] = useState("www.photo.com");
+  const [photoUrl, setPhotoUrl] = useState(
+    "https://datilishes.b-cdn.net/wp-content/uploads/2021/12/%D7%90%D7%99%D7%99%D7%9C-%D7%A9%D7%A0%D7%99.jpeg"
+  );
   const [photoIndex, setPhotoIndex] = useState(6);
   const [photoTitle, setPhotoTitle] = useState("My Photo");
   const [loading, setLoading] = useState(false);

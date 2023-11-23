@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./Components/Login";
-import Signup from "./Components/Signup";
+import Todos from "./Components/Todos";
 import Home from "./Components/Home";
+import Signup from "./Components/Signup";
+import Login from "./Components/Login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Posts from "./Components/Posts";
 import Navbar from "./Components/Navbar";
@@ -50,6 +51,7 @@ function App() {
               path="/info"
               element={<Info setActiveUser={login} currentUser={currentUser} />}
             />
+            <Route path="/Todos" element={<Todos />} />
             <Route path="/posts">
               <Route index element={<Posts currentUser={currentUser} />} />
               <Route path=":id" element={<Post currentUser={currentUser} />} />

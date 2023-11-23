@@ -26,7 +26,10 @@ export default function Navbar({ logout }) {
           {" "}
           <div>Albums</div>{" "}
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "")}
+          to="/todos"
+        >
           {" "}
           <div>Todos</div>{" "}
         </NavLink>

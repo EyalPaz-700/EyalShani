@@ -35,7 +35,7 @@ export default function Login({ setActiveUser }) {
         } else {
           const reponse = await addNewUser(data.length + 1);
           if (reponse) {
-            setActiveUser(user);
+            setActiveUser(reponse);
             navigate("/Home");
           } else {
             setErrMsg("User Creation Failed");
